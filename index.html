@@ -3,51 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Química Descomplicada: O Mundo da Matéria (7º Ano)</title>
+    <title>Aventuras Atômicas: Química para Gênios do 7º Ano</title>
 
     <style>
-        /* CSS para o Estilo do Site */
+        /* CSS Personalizado para o 7º Ano: Tema Pop/Vibrante */
         body {
-            font-family: 'Verdana', sans-serif; /* Fonte limpa e fácil de ler */
-            line-height: 1.5;
+            font-family: 'Comic Sans MS', 'Arial Black', sans-serif; /* Fonte mais "divertida" (simulada) */
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #e6f7ff; /* Azul claro suave */
-            color: #2c3e50; /* Cinza escuro amigável */
+            background-color: #f0f8ff; /* Fundo leve, quase branco-azulado */
+            color: #38006b; /* Roxo profundo (novo corpo de texto) */
         }
 
         header {
-            background-color: #3498db; /* Azul primário, energizante */
+            background-color: #5d00a0; /* Roxo vibrante (cor principal) */
             color: white;
-            padding: 35px 20px;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 3.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             margin-top: 5px;
-            font-weight: 300;
+            font-style: italic;
+        }
+        
+        .header-button {
+            background-color: #ffcc00; /* Amarelo Neon */
+            color: #5d00a0;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .header-button:hover {
+            background-color: #e0b300;
+            transform: scale(1.05);
         }
 
         nav {
-            background-color: #2c3e50; /* Azul escuro da tipografia */
+            background-color: #38006b; /* Roxo escuro da tipografia */
             overflow: hidden;
             display: flex;
             justify-content: center;
-            border-bottom: 5px solid #f1c40f; /* Amarelo de destaque */
+            border-bottom: 7px solid #00ffff; /* Ciano Neon (super destaque) */
         }
 
         nav a {
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 20px;
+            padding: 15px 22px;
             text-decoration: none;
             transition: background-color 0.3s;
             font-weight: bold;
@@ -55,169 +76,187 @@
         }
 
         nav a:hover {
-            background-color: #3498db; 
+            background-color: #5d00a0; 
         }
 
         main {
-            padding: 25px;
+            padding: 30px;
             max-width: 1100px;
-            margin: 25px auto;
+            margin: 30px auto;
         }
 
         section {
             background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 35px;
+            margin-bottom: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            border: 1px solid #00ffff; /* Borda Ciano */
         }
 
         section h2 {
-            color: #e74c3c; /* Vermelho para o título principal da seção */
-            border-bottom: 3px solid #f1c40f;
-            padding-bottom: 10px;
+            color: #e6005c; /* Rosa/Vermelho (destaque forte) */
+            border-bottom: 4px solid #ffcc00; /* Amarelo vibrante */
+            padding-bottom: 12px;
             margin-top: 0;
-            font-size: 2em;
+            font-size: 2.2em;
+            font-weight: 900;
         }
         
         section h3 {
-            color: #3498db;
-            margin-top: 20px;
-            font-size: 1.3em;
+            color: #5d00a0;
+            margin-top: 25px;
+            font-size: 1.5em;
+        }
+
+        p {
+            margin-bottom: 15px;
         }
 
         ul {
-            list-style-type: circle;
-            padding-left: 25px;
+            list-style-type: '👉 '; /* Lista com emoji */
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
         }
         
         .box-destaque {
-            background-color: #ecf0f1; /* Cinza claro para boxes de informação */
-            padding: 15px;
-            border-left: 5px solid #2ecc71; /* Verde de "Conhecimento" */
-            margin: 15px 0;
-            border-radius: 5px;
-            font-style: italic;
+            background-color: #e0ffff; /* Ciano claro (leve) */
+            padding: 20px;
+            border: 2px dashed #00ffff; /* Borda pontilhada divertida */
+            margin: 20px 0;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: bold;
+            color: #008080; /* Cor de texto para o box */
         }
 
         footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #38006b;
+            color: #ffcc00;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
-            font-size: 0.9em;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 1em;
+            border-top: 5px solid #e6005c;
         }
 
         footer a {
-            color: #f1c40f;
+            color: #00ffff;
             text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>⚛️ Química Descomplicada para o 7º Ano</h1>
-        <p>Entenda o mundo ao seu redor: A ciência de tudo o que existe!</p>
+        <h1>⚛️ Aventuras Atômicas: Química para Gênios do 7º Ano</h1>
+        <p>Entenda o mundo ao seu redor: A ciência mágica de tudo o que você toca! 🧙‍♀️</p>
+        <button class="header-button" onclick="alert('Desafio: Qual é o elemento mais leve? Resposta: Hidrogênio (H)!');">
+            🌟 Desafio Químico do Dia!
+        </button>
     </header>
 
     <nav>
-        <a href="#materia">A Matéria e Suas Fases</a>
-        <a href="#atomos">Átomos e Elementos</a>
-        <a href="#misturas">Misturas e Separação</a>
-        <a href="#fenomenos">Fenômenos Químicos</a>
-        <a href="#experiencia">Mão na Massa!</a>
+        <a href="#materia">A Matéria e Seus Poderes</a>
+        <a href="#atomos">Onde Moram os Átomos</a>
+        <a href="#misturas">Detetives de Misturas</a>
+        <a href="#fenomenos">Mágica ou Química?</a>
+        <a href="#experiencia">Laboratório Ninja</a>
     </nav>
 
     <main>
         <section id="materia">
-            <h2>A Matéria e Suas Fases: O que é feito o universo?</h2>
-            <p><strong>Matéria</strong> é tudo aquilo que tem massa e ocupa lugar no espaço (volume). Ou seja, **tudo o que existe é feito de matéria**, desde uma simples caneta até as estrelas distantes. A Química estuda como essa matéria é feita e como ela se transforma.</p>
+            <h2>A Matéria e Seus Poderes: Do Gelo ao Gás</h2>
+            <p><strong>Matéria</strong> é o nome chique que damos para **TUDO** que tem peso (massa) e ocupa um lugar (volume). Seu celular, o ar que você solta e a água na garrafa: tudo é matéria. A Química quer saber como ela é feita e por que ela não para de mudar.</p>
 
-            <h3>Estados Físicos da Matéria</h3>
-            <p>A matéria pode aparecer em três estados principais, dependendo da temperatura e pressão. Imagine a água: ela pode ser gelo (sólido), água líquida ou vapor (gasoso). O que muda é a organização das partículas (átomos ou moléculas):</p>
+            <h3>Os 3 Estados Ninja da Matéria</h3>
+            <p>Pense na água como um agente secreto que pode mudar de disfarce! O que muda é a preguiça ou a agitação das partículas:</p>
             <ul>
-                <li><strong>Sólido:</strong> As partículas estão muito organizadas e próximas. Tem forma e volume definidos (Ex: Gelo, Pedra).</li>
-                <li><strong>Líquido:</strong> As partículas estão mais soltas, mas ainda próximas. Tem volume definido, mas a forma é variável (adapta-se ao recipiente. Ex: Água, Suco).</li>
-                <li><strong>Gasoso:</strong> As partículas estão muito separadas e se movimentam rapidamente. Não tem forma nem volume definidos (Ex: Vapor d'água, Ar).</li>
+                <li><strong>Sólido (Ex: Gelo):</strong> Partículas de mãos dadas e paradinhas. Têm forma e volume fixos. Não te dou outra chance, gelo!</li>
+                <li><strong>Líquido (Ex: Água):</strong> Partículas soltinhas, escorregando umas nas outras. Volume fixo, mas a forma é de camaleão (copia o recipiente).</li>
+                <li><strong>Gasoso (Ex: Vapor d'água):</strong> Partículas super agitadas! Correm para todos os lados. Não têm forma nem volume definidos. O gás quer dominar o espaço!</li>
             </ul>
             <p class="box-destaque">
-                👉 Curiosidade: As mudanças de fase são fenômenos físicos, ou seja, a substância continua sendo a mesma (água continua sendo água), só muda o estado de agregação das partículas.
+                👉 Curiosidade de Físico: Mudar de fase (derreter, congelar) é fácil! É só aquecer ou esfriar. A substância não muda, só o "estilo" das partículas.
             </p>
         </section>
 
         <section id="atomos">
-            <h2>Átomos e Elementos: Os Blocos de Construção</h2>
-            <p>Se você pudesse dividir a matéria em pedacinhos, chegaria ao **átomo**. O átomo é a menor parte de um elemento químico que mantém suas propriedades. Eles são como os "tijolos" que constroem tudo!</p>
+            <h2>Onde Moram os Átomos: Os Minions da Química</h2>
+            <p>O **átomo** é o "tijolo" original, o menor que ainda tem as propriedades do material. Se você dividir um bloco de ouro (Au) até o átomo, ele ainda é ouro. Se dividir mais, não é mais ouro! São os verdadeiros Minions da Química!</p>
 
-            <h3>Estrutura Básica do Átomo</h3>
-            <p>Um átomo é composto por:</p>
+            <h3>O Bairro do Átomo</h3>
+            <p>O átomo tem uma estrutura divertida:</p>
             <ul>
-                <li><strong>Núcleo:</strong> O centro do átomo, onde ficam os **Prótons** (carga positiva) e os **Nêutrons** (carga neutra).</li>
-                <li><strong>Eletrosfera:</strong> A região em volta do núcleo, onde ficam os **Elétrons** (carga negativa), girando em "camadas".</li>
+                <li><strong>Núcleo (O Chefão):</strong> Bem no centro! Lotado de **Prótons** (positivos: os "sim") e **Nêutrons** (neutros: os "talvez").</li>
+                <li><strong>Eletrosfera (A Pista de Dança):</strong> Onde os **Elétrons** (negativos: os "não") ficam girando super rápido.</li>
             </ul>
 
-            <h3>Os Elementos Químicos e a Tabela</h3>
-            <p>Um **Elemento Químico** é um tipo de átomo (Ex: Hidrogênio, Oxigênio, Ferro). Eles são organizados em uma ferramenta incrível: a **Tabela Periódica**.</p>
-            <p>A Tabela organiza os elementos por ordem de número de prótons (o Número Atômico). É um mapa que nos ajuda a prever como eles se comportam! Você já deve ter visto o Ferro ($\text{Fe}$) e o Ouro ($\text{Au}$) nela!</p>
+            <h3>Tabela Periódica: O Mapa do Tesouro!</h3>
+            <p>Os **Elementos Químicos** (tipo Hidrogênio, $\text{H}$) são como as peças únicas de LEGO. O **Mapa do Tesouro** (Tabela Periódica) organiza todos eles pelo número de Prótons. Ela não é só um quadro na parede, é um guia de como o mundo funciona!</p>
             
             <p class="box-destaque">
-                🥇 Os Símbolos Químicos são universais! O Sódio é sempre $\text{Na}$, não importa o idioma. Isso é importante para a ciência no mundo todo.
+                🏆 Dica de Mestre: Quer ser um espião químico? memorize os símbolos mais comuns: $\text{O}$ (Oxigênio), $\text{C}$ (Carbono), $\text{Na}$ (Sódio). Eles estão em todo lugar!
             </p>
         </section>
 
         <section id="misturas">
-            <h2>Misturas e Separação: Juntando e Desjuntando</h2>
-            <p>Quase tudo o que vemos no dia a dia não é uma substância pura, mas sim uma **mistura**, que é a união de duas ou mais substâncias. O ar que respiramos é uma mistura de vários gases (Nitrogênio, Oxigênio, $\text{CO}_2$, etc.).</p>
+            <h2>Detetives de Misturas: Juntando e Separando o Desastre</h2>
+            <p>Quase tudo na sua casa é uma **mistura** (o refrigerante, o chocolate, o ar). É só juntar duas ou mais substâncias. Seu trabalho é ser o detetive para descobrir se a mistura é bagunçada ou organizada!</p>
 
-            <h3>Tipos de Misturas</h3>
+            <h3>Misturas: Bagunça Nível Fácil vs. Nível Hard</h3>
             <ul>
-                <li><strong>Homogêneas (ou Soluções):</strong> É aquela mistura que tem apenas uma fase, ou seja, você não consegue distinguir os componentes. Parece uma coisa só. Ex: Água com sal dissolvido.</li>
-                <li><strong>Heterogêneas:</strong> É aquela mistura que tem duas ou mais fases, ou seja, você consegue ver e distinguir os componentes. Ex: Água e óleo, Granito.</li>
+                <li><strong>Homogêneas (Nível Fácil):</strong> Parecem uma coisa só. O detetive não consegue ver a diferença. Ex: Água + Açúcar. (Também chamamos de **Soluções**).</li>
+                <li><strong>Heterogêneas (Nível Hard):</strong> Bagunça visível! O detetive vê duas ou mais fases. Ex: Água + Areia + Óleo.</li>
             </ul>
             
-            <h3>Métodos de Separação</h3>
-            <p>Como separar as coisas? Depende do tipo de mistura:</p>
+            <h3>Métodos de Separação: Salvando o Dia!</h3>
+            <p>Precisamos de superpoderes para separar! Qual usar depende do que você tem na mão:</p>
             <ul>
-                <li><strong>Catação:</strong> Separar sólidos com as mãos (Ex: Feijão sujo).</li>
-                <li><strong>Filtração:</strong> Usar um filtro para separar um sólido de um líquido (Ex: Coar café).</li>
-                <li><strong>Evaporação:</strong> Aquecer para fazer o líquido evaporar, sobrando o sólido (Ex: Obter sal da água do mar).</li>
+                <li><strong>Catação:</strong> O superpoder das mãos! (Ex: Separar lixo reciclável ou feijões estragados).</li>
+                <li><strong>Filtração:</strong> O superpoder da peneira! (Ex: Fazer café, tirar a areia da água).</li>
+                <li><strong>Decantação:</strong> O superpoder da paciência! Esperar o sólido pesado ir para o fundo para tirar o líquido por cima (Ex: Separar água e barro).</li>
             </ul>
         </section>
         
         <section id="fenomenos">
-            <h2>Fenômenos Químicos: O que Acontece Quando as Coisas Mudam?</h2>
-            <p>As transformações da matéria são chamadas de **fenômenos**. Eles podem ser físicos ou químicos.</p>
+            <h2>Mágica ou Química? A Mudança de Identidade</h2>
+            <p>As transformações são os **fenômenos**. Seu professor de Química não faz mágica, ele mostra reações! A grande pergunta é: a identidade da matéria mudou ou não?</p>
             
-            <h3>Fenômenos Físicos vs. Fenômenos Químicos</h3>
+            <h3>Fenômenos Físicos (Continua o Mesmo) vs. Fenômenos Químicos (Virou Outra Coisa!)</h3>
             <ul>
-                <li><strong>Físico:</strong> A matéria muda de aparência, mas a sua composição química não muda. A substância **continua a mesma**. Ex: Amassar um papel, a água virar gelo (mudança de fase).</li>
-                <li><strong>Químico:</strong> A matéria se transforma em uma **nova substância**. Ocorre uma reação química! Ex: Queimar um papel (vira cinza e fumaça), cozinhar um ovo.</li>
+                <li><strong>Físico:</strong> A aparência mudou, mas o $\text{DNA}$ da substância é o mesmo. Ex: Quebrar um copo, amassar uma lata, congelar água.</li>
+                <li><strong>Químico:</strong> A substância se transformou em uma totalmente nova. É uma **Reação Química**! Ex: O ovo cozinhando, um prego enferrujando, um bolo assando.</li>
             </ul>
             
-            <p><strong>Como saber se houve um Fenômeno Químico?</strong> Sinais claros são:</p>
             <p class="box-destaque">
-                🔥 Liberação de luz ou calor (fogo), Mudança de cor, Formação de bolhas (gás), Formação de um sólido no líquido (precipitado).
+                🚨 Alerta de Reação! Sinais que a Química Venceu a Mágica: 🔥 Apareceu fogo/calor, Mudou a cor do nada, Sentiu um cheiro novo, Surgiu uma fumaça ou bolha de gás.
             </p>
         </section>
 
         <section id="experiencia">
-            <h2>Mão na Massa! 💡</h2>
-            <p>A Química fica muito mais legal na prática. Sempre peça ajuda a um adulto ou professor antes de fazer qualquer experimento.</p>
+            <h2>Laboratório Ninja 🧪: Faça em Casa (Com um Adulto!)</h2>
+            <p>A prática é a parte mais divertida. **Lembre-se:** segurança em primeiro lugar! Só faça isso com a supervisão de um adulto responsável.</p>
             
-            <h3>Experiência: O Sumiço do Açúcar</h3>
+            <h3>Missão 1: A Reação Explosiva (e segura!)</h3>
+            <p>O famoso "Vulcão Caseiro" é uma reação de **Ácido-Base**! O vinagre (ácido) e o bicarbonato (base) se odeiam e reagem, liberando gás carbônico ($\text{CO}_2$).</p>
             <ol>
-                <li>Pegue um copo com água (temperatura ambiente).</li>
-                <li>Adicione uma colher de açúcar e mexa.</li>
-                <li>O açúcar "some". Isso é um exemplo de **Mistura Homogênea** (Solução). A água consegue separar e envolver as partículas do açúcar, formando uma só fase.</li>
-                <li>Se você deixar a água evaporar (ao sol ou fervendo), o açúcar volta a aparecer no fundo do copo. Isso é um **Método de Separação** por Evaporação!</li>
+                <li>Coloque 1 colher de Bicarbonato de Sódio ($\text{NaHCO}_{3}$) dentro de um copo.</li>
+                <li>Adicione um pouco de corante vermelho (para parecer lava).</li>
+                <li>Jogue um pouco de Vinagre ($\text{CH}_{3}\text{COOH}$) rapidamente e observe a erupção!</li>
             </ol>
+            
+            <h3>Missão 2: O Sumiço do Açúcar (A Solução Perfeita)</h3>
+            <p>Misture água com açúcar. O açúcar "some" e você tem uma **Mistura Homogênea** (Solução). Se você evaporar a água (pedindo a um adulto para ferver ou deixando ao sol), o açúcar te dá tchau e volta a aparecer! É o método de Separação por Evaporação!</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Química Descomplicada | Material de Estudo para o Ensino Fundamental. | <a href="mailto:contato@quimicabasica.com">Dúvidas? Mande um e-mail!</a></p>
+        <p>✨ &copy; 2025 Aventuras Atômicas - Um Portal Feito para Gênios. | Precisa de ajuda? <a href="mailto:contato@quimicabasica.com">Fale com um Cientista!</a></p>
     </footer>
 
 </body>
