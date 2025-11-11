@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventuras Atômicas: Química para Gênios do 7º Ano</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         /* CSS Personalizado para o 7º Ano: Tema Pop/Vibrante */
         body {
-            font-family: 'Comic Sans MS', 'Arial Black', sans-serif; /* Fonte mais "divertida" (simulada) */
+            font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff; /* Fundo leve, quase branco-azulado */
-            color: #38006b; /* Roxo profundo (novo corpo de texto) */
+            background-color: #f0f8ff; /* Fundo leve */
+            color: #38006b; /* Roxo profundo */
         }
 
         header {
-            background-color: #5d00a0; /* Roxo vibrante (cor principal) */
+            background-color: #5d00a0; /* Roxo vibrante */
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -27,9 +29,17 @@
 
         header h1 {
             margin: 0;
-            font-size: 3.2em;
+            font-family: 'Bangers', cursive;
+            font-size: 4em;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            text-shadow: 4px 4px 0 #ffcc00; /* Destaque de quadrinhos */
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.02); }
         }
 
         header p {
@@ -39,29 +49,31 @@
         }
         
         .header-button {
-            background-color: #ffcc00; /* Amarelo Neon */
+            background-color: #ffcc00;
             color: #5d00a0;
-            border: none;
-            padding: 10px 20px;
+            border: 3px solid #00ffff;
+            padding: 12px 25px;
             margin-top: 15px;
             font-weight: bold;
-            font-size: 1.1em;
-            border-radius: 25px;
+            font-size: 1.2em;
+            border-radius: 30px;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
         }
 
         .header-button:hover {
             background-color: #e0b300;
-            transform: scale(1.05);
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
         nav {
-            background-color: #38006b; /* Roxo escuro da tipografia */
+            background-color: #38006b;
             overflow: hidden;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            border-bottom: 7px solid #00ffff; /* Ciano Neon (super destaque) */
+            border-bottom: 7px solid #00ffff;
         }
 
         nav a {
@@ -70,13 +82,15 @@
             text-align: center;
             padding: 15px 22px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
             font-weight: bold;
             text-transform: uppercase;
         }
 
         nav a:hover {
-            background-color: #5d00a0; 
+            background-color: #e6005c;
+            color: #ffcc00;
+            transform: translateY(-2px);
         }
 
         main {
@@ -85,18 +99,55 @@
             margin: 30px auto;
         }
 
+        /* Tabela de Conteúdo Rápida */
+        #tabela-rapida {
+            background-color: #fffacd;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ffcc00;
+        }
+        #tabela-rapida h3 {
+            color: #e6005c;
+            border-bottom: 2px dashed #5d00a0;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-family: 'Bangers', cursive;
+            font-size: 2em;
+        }
+        #tabela-rapida a {
+            display: inline-block;
+            margin: 5px 10px;
+            color: #5d00a0;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        #tabela-rapida a:hover {
+            background-color: #ffcc00;
+        }
+
         section {
             background-color: white;
             padding: 35px;
             margin-bottom: 35px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            border: 1px solid #00ffff; /* Borda Ciano */
+            border: 1px solid #00ffff;
+            transition: transform 0.3s;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
         }
 
         section h2 {
-            color: #e6005c; /* Rosa/Vermelho (destaque forte) */
-            border-bottom: 4px solid #ffcc00; /* Amarelo vibrante */
+            color: #e6005c;
+            border-bottom: 4px solid #ffcc00;
             padding-bottom: 12px;
             margin-top: 0;
             font-size: 2.2em;
@@ -109,29 +160,62 @@
             font-size: 1.5em;
         }
 
-        p {
-            margin-bottom: 15px;
-        }
-
         ul {
-            list-style-type: '👉 '; /* Lista com emoji */
+            list-style-type: '👉 ';
             padding-left: 20px;
         }
         
-        li {
-            margin-bottom: 8px;
-        }
-        
         .box-destaque {
-            background-color: #e0ffff; /* Ciano claro (leve) */
+            background-color: #e0ffff;
             padding: 20px;
-            border: 2px dashed #00ffff; /* Borda pontilhada divertida */
+            border: 2px dashed #00ffff;
             margin: 20px 0;
             border-radius: 10px;
-            font-style: normal;
             font-weight: bold;
-            color: #008080; /* Cor de texto para o box */
+            color: #008080;
         }
+
+        /* Estilo do Quiz Interativo */
+        .quiz-container {
+            background-color: #f7f7ff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 3px solid #e6005c;
+            margin-top: 20px;
+        }
+
+        .quiz-container button {
+            background-color: #5d00a0;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-weight: bold;
+        }
+
+        .quiz-container button:hover:not(:disabled) {
+            background-color: #38006b;
+        }
+        
+        .quiz-container button.correct {
+            background-color: #00cc66;
+        }
+        
+        .quiz-container button.incorrect {
+            background-color: #ff3333;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+        /* Fim do Estilo do Quiz Interativo */
 
         footer {
             background-color: #38006b;
@@ -147,6 +231,15 @@
             color: #00ffff;
             text-decoration: none;
             font-weight: bold;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 { font-size: 3em; }
+            nav { flex-direction: column; }
+            nav a { padding: 10px; }
+            main { padding: 15px; }
+            section { padding: 25px; }
         }
     </style>
 </head>
@@ -169,6 +262,14 @@
     </nav>
 
     <main>
+        <div id="tabela-rapida">
+            <h3>📖 Pule para um Tópico!</h3>
+            <a href="#materia">Matéria</a>
+            <a href="#atomos">Átomos</a>
+            <a href="#misturas">Misturas</a>
+            <a href="#fenomenos">Fenômenos</a>
+            <a href="#experiencia">Experiência</a>
+        </div>
         <section id="materia">
             <h2>A Matéria e Seus Poderes: Do Gelo ao Gás</h2>
             <p><strong>Matéria</strong> é o nome chique que damos para **TUDO** que tem peso (massa) e ocupa um lugar (volume). Seu celular, o ar que você solta e a água na garrafa: tudo é matéria. A Química quer saber como ela é feita e por que ela não para de mudar.</p>
@@ -187,7 +288,7 @@
 
         <section id="atomos">
             <h2>Onde Moram os Átomos: Os Minions da Química</h2>
-            <p>O **átomo** é o "tijolo" original, o menor que ainda tem as propriedades do material. Se você dividir um bloco de ouro (Au) até o átomo, ele ainda é ouro. Se dividir mais, não é mais ouro! São os verdadeiros Minions da Química!</p>
+            <p>O **átomo** é o "tijolo" original, o menor que ainda tem as propriedades do material. Se você dividir um bloco de ouro ($\text{Au}$) até o átomo, ele ainda é ouro. Se dividir mais, não é mais ouro! São os verdadeiros Minions da Química!</p>
 
             <h3>O Bairro do Átomo</h3>
             <p>O átomo tem uma estrutura divertida:</p>
@@ -236,7 +337,26 @@
             <p class="box-destaque">
                 🚨 Alerta de Reação! Sinais que a Química Venceu a Mágica: 🔥 Apareceu fogo/calor, Mudou a cor do nada, Sentiu um cheiro novo, Surgiu uma fumaça ou bolha de gás.
             </p>
-        </section>
+
+            <h3>🧠 Desafio Rápido: Quiz de Identificação!</h3>
+            <div class="quiz-container">
+                <p>1. O que acontece quando o açúcar se dissolve na água quente?</p>
+                <div id="q1-options">
+                    <button data-correct="false" onclick="checkAnswer('q1', this)">Fenômeno Químico</button>
+                    <button data-correct="true" onclick="checkAnswer('q1', this)">Fenômeno Físico</button>
+                </div>
+                <div id="q1-feedback" class="feedback"></div>
+
+                <hr style="margin: 15px 0; border-color: #f0f0f0;">
+
+                <p>2. O que acontece quando você acende um fósforo?</p>
+                <div id="q2-options">
+                    <button data-correct="true" onclick="checkAnswer('q2', this)">Fenômeno Químico</button>
+                    <button data-correct="false" onclick="checkAnswer('q2', this)">Fenômeno Físico</button>
+                </div>
+                <div id="q2-feedback" class="feedback"></div>
+            </div>
+            </section>
 
         <section id="experiencia">
             <h2>Laboratório Ninja 🧪: Faça em Casa (Com um Adulto!)</h2>
@@ -258,6 +378,77 @@
     <footer>
         <p>✨ &copy; 2025 Aventuras Atômicas - Um Portal Feito para Gênios. | Precisa de ajuda? <a href="mailto:contato@quimicabasica.com">Fale com um Cientista!</a></p>
     </footer>
+
+    <script>
+        // Função para o Quiz Interativo (Refatorada para maior estabilidade)
+        function checkAnswer(questionId, buttonElement) {
+            const isCorrect = buttonElement.dataset.correct === 'true';
+            const optionsDiv = document.getElementById(questionId + '-options');
+            const feedbackDiv = document.getElementById(questionId + '-feedback');
+            
+            // 1. Desabilita todos os botões e aplica estilo de resposta correta
+            optionsDiv.querySelectorAll('button').forEach(btn => {
+                btn.disabled = true;
+                if (btn.dataset.correct === 'true') {
+                    btn.classList.add('correct');
+                }
+            });
+            
+            // 2. Aplica estilo na escolha do usuário
+            if (isCorrect) {
+                buttonElement.classList.add('correct');
+            } else {
+                buttonElement.classList.add('incorrect');
+            }
+            
+            // 3. Exibe o feedback
+            feedbackDiv.style.display = 'block';
+
+            let feedbackText = '';
+            let bgColor = '';
+            let color = '';
+
+            if (isCorrect) {
+                if (questionId === 'q1') {
+                    feedbackText = '🎉 **Certo!** Dissolver açúcar na água é um Fenômeno Físico, pois nenhuma substância nova é criada.';
+                } else if (questionId === 'q2') {
+                    feedbackText = '🔥 **Isso aí!** Acender o fósforo é Químico, pois ele se transforma em cinzas e gás (substâncias novas).';
+                }
+                bgColor = '#ccffcc';
+                color = '#006600';
+            } else {
+                if (questionId === 'q1') {
+                    feedbackText = '❌ **Errado!** Lembre-se, o açúcar pode voltar a ser açúcar se a água evaporar. Tente de novo!';
+                } else if (questionId === 'q2') {
+                    feedbackText = '❌ **Errado!** O fósforo não volta a ser o que era antes! Tente de novo.';
+                }
+                bgColor = '#ffcccc';
+                color = '#cc0000';
+            }
+
+            feedbackDiv.innerHTML = feedbackText;
+            feedbackDiv.style.backgroundColor = bgColor;
+            feedbackDiv.style.color = color;
+        }
+
+        // Script para a Rolagem Suave (Smooth Scrolling)
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('nav a, #tabela-rapida a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
